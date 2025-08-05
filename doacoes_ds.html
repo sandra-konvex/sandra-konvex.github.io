@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoie o Projeto — Echo Engine</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: #9d0208;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    h1, h2, h3 {
+      color: #d00000;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    .card {
+      background: #ffe5e5;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .card-blue {
+      background: #e5f0ff;
+    }
+    .button {
+      background-color: #d00000;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .button-blue {
+      background-color: #0056b3;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    footer {
+      background-color: #e0e0e0;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #9d0208;
+    }
+    @media (max-width: 600px) {
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apoie o Projeto</h1>
+    <p>Sua contribuição financia pesquisa, produção e distribuição dos dispositivos</p>
+    <!-- (MENU igual) -->
+  </header>
+
+  <main class="container">
+    <h2>💡 Por que apoiar?</h2>
+    <p>
+      O projeto <strong>Echo Engine</strong> nasceu da vontade de tornar o mundo mais inclusivo. Cada contribuição ajuda a:
+    </p>
+    <ul>
+      <li>💻 Desenvolver novos protótipos com sensores e microcontroladores</li>
+      <li>🧪 Testar os dispositivos em ambientes reais</li>
+      <li>📦 Criar kits educativos para escolas e ONGs</li>
+      <li>🌐 Manter a infraestrutura digital do projeto</li>
+      <li>📚 Produzir tutoriais e materiais de capacitação</li>
+    </ul>
+
+    <h2>💰 Doações Financeiras</h2>
+    <div class="card">
+      <h3>📲 Pix</h3>
+      <p><strong>Chave Pix:</strong> echo.engine.konvex@gmail.com</p>
+      <button class="button" onclick="navigator.clipboard.writeText('echo.engine.konvex@gmail.com')">Copiar chave Pix</button>
+      <img src="img/pix_qrcode.png" alt="QR Code Pix" style="max-width:200px; border-radius:8px; margin-top:15px;">
+    </div>
+
+    <div class="card">
+      <h3>🌎 Outras Formas</h3>
+      <p>PayPal, criptomoedas ou transferência bancária? <a href="mailto:echo.engine.konvex@gmail.com">Entre em contato</a>.</p>
+    </div>
+
+    <h2>🛠️ Doações de Materiais</h2>
+    <div class="card">
+      <p>Precisa de componentes eletrônicos, placas ou equipamentos? Veja nossa <a href="#">lista de necessidades</a>.</p>
+    </div>
+
+    <h2>🔍 Transparência</h2>
+    <p>Todo valor será investido diretamente no projeto. Relatórios periódicos serão publicados.</p>
+  </main>
+
+  <footer>
+    <p><strong>Conecte-se comigo:</strong></p>
+    <div>
+      <a href="https://x.com/SandraKonvex" target="_blank">🐦 X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/sandra-bati-furquim/" target="_blank">💼 LinkedIn</a>
+      <a href="https://www.open.edu/openlearn/profiles/zs782286" target="_blank">🎓 OpenLearn Profile</a>
+      <a href="https://sandra-konvex.github.io/" target="_blank">💻 GitHub Pages</a>
+    </div>
+    <p>Feito com ❤️ por Sandra Bati Furquim</p>
+  </footer>
+</body>
+</html>
