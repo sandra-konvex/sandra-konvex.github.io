@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colabore — Echo Engine</title>
+  <title>Participe — Echo Engine</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -38,26 +38,19 @@
     ul {
       padding-left: 20px;
     }
-    .pix-box {
-      background-color: #ffe5e5;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .pix-box img {
-      margin-top: 15px;
-      max-width: 200px;
-      border-radius: 8px;
-    }
-    .button-copy {
+    .button-link {
+      display: inline-block;
       background-color: #d00000;
       color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
+      padding: 10px 20px;
+      margin: 20px 10px 0 0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .button-link:hover {
+      background-color: #9d0208;
     }
     footer {
       background-color: #e0e0e0;
@@ -89,7 +82,7 @@
 </head>
 <body>
   <header>
-    <h1>Colabore</h1>
+    <h1>Participe</h1>
     <p>Junte-se a quem acredita na inclusão através da tecnologia</p>
     <nav>
       <a href="index.html">Início</a>
@@ -101,7 +94,7 @@
   </header>
 
   <main class="container">
-    <h2>💡 Por que colaborar?</h2>
+    <h2>💡 Por que participar?</h2>
     <p>
       O projeto <strong>Echo Engine</strong> nasceu da vontade de tornar o mundo mais inclusivo. Cada colaboração ajuda a:
     </p>
@@ -113,15 +106,10 @@
       <li>📚 Produzir tutoriais e materiais de capacitação</li>
     </ul>
 
-    <h2>📲 Formas de colaborar</h2>
-    <div class="pix-box">
-      <p><strong>Pix:</strong> echo.engine.konvex@gmail.com</p>
-      <button class="button-copy" onclick="navigator.clipboard.writeText('echo.engine.konvex@gmail.com')">Copiar chave Pix</button>
-      <img src="img/pix_qrcode.png" alt="QR Code Pix">
-      <p><strong>PayPal:</strong> paypal.me/echoengine</p>
-      <p><strong>Criptomoedas:</strong> Solicite endereço por e-mail</p>
-      <p><strong>Peças e equipamentos:</strong> Envie um e-mail para combinar a entrega</p>
-    </div>
+    <h2>🚀 Como você pode participar?</h2>
+    <p>Escolha uma das opções abaixo:</p>
+    <a href="doacoes.html" class="button-link">💰 Fazer uma Doação</a>
+    <a href="solicita.html" class="button-link">📦 Solicitar um Aparelho</a>
 
     <h2>🎯 Doação Adotada (em breve)</h2>
     <p>
