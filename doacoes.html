@@ -38,27 +38,34 @@
     ul {
       padding-left: 20px;
     }
-    .pix-box {
-      background-color: #ffe5e5;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .pix-box img {
-      margin-top: 15px;
-      max-width: 200px;
-      border-radius: 8px;
-    }
-    .button-copy {
-      background-color: #d00000;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+     .pix-box {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    color: #005f73;
+  }
+  .pix-box img {
+    margin-top: 15px;
+    max-width: 200px;
+    border-radius: 8px;
+  }
+  .button-copy {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .copy-message {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #007f5f;
+    display: none;
+  }
     footer {
       background-color: #e0e0e0;
       padding: 20px;
@@ -87,6 +94,21 @@
     }
   </style>
 </head>
+<script>
+  function copyPix() {
+    navigator.clipboard.writeText('echo.engine.konvex@gmail.com').then(() => {
+      const msg = document.getElementById('copyMsg');
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 2000);
+    });
+  }
+</script>
+
+
+
+  
 <body>
   <header>
     <h1>Doações</h1>
@@ -116,12 +138,10 @@
    <h2>📲 Como doar via Pix</h2>
 <div class="pix-box">
   <p><strong>Chave Pix:</strong> echo.engine.konvex@gmail.com</p>
-  <button class="button-copy" onclick="navigator.clipboard.writeText('echo.engine.konvex@gmail.com')">Copiar chave Pix</button>
-  <img src="img/pix_qrcode.png" alt="QR Code Pix" style="max-width:200px; border-radius:8px; margin-top:15px;">
+  <img src="img/pix_qrcode.png" alt="QR Code Pix">
+  <button class="button-copy" onclick="copyPix()">Copiar chave Pix</button>
+  <div class="copy-message" id="copyMsg">✅ Chave Pix copiada!</div>
 </div>
-
-
-
     <h2>🔍 Transparência</h2>
     <p>
       Todo valor arrecadado será investido diretamente no desenvolvimento e distribuição dos dispositivos. Relatórios de progresso estarão disponíveis para quem quiser acompanhar.
