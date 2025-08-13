@@ -104,11 +104,17 @@
       }, 2000);
     });
   }
+
+  function copyCrypto(address) {
+    navigator.clipboard.writeText(address).then(() => {
+      const msg = document.getElementById('cryptoCopyMsg');
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 2000);
+    });
+  }
 </script>
-
-
-
-  
 <body>
   <header>
     <h1>Doações</h1>
@@ -151,6 +157,44 @@
     <p>
       Se você acredita que a tecnologia pode transformar vidas, considere apoiar este projeto. Cada contribuição — pequena ou grande — faz uma enorme diferença.
     </p>
+    <h2>💰 Como doar via Criptomoedas</h2>
+
+<div class="pix-box">
+  <p><strong>Bitcoin (BTC)</strong> — Rede: Bitcoin</p>
+  <p>Endereço: bc1q89h9ek8dmq2tzl5j2qw7rd7hj46zkmv2serc3x</p>
+  <img src="img/btc_qrcode.png" alt="QR Code BTC">
+  <button class="button-copy" onclick="copyCrypto('bc1q89h9ek8dmq2tzl5j2qw7rd7hj46zkmv2serc3x')">Copiar endereço BTC</button>
+</div>
+
+<div class="pix-box">
+  <p><strong>Ethereum (ETH)</strong> — Rede: Ethereum</p>
+  <p>Endereço: 0x6B7Ee67c43997bdFC5681397120c360123732a1d</p>
+  <img src="img/eth_qrcode.png" alt="QR Code ETH">
+  <button class="button-copy" onclick="copyCrypto('0x6B7Ee67c43997bdFC5681397120c360123732a1d')">Copiar endereço ETH</button>
+</div>
+
+<div class="pix-box">
+  <p><strong>BNB</strong> — Rede: BNB Smart Chain</p>
+  <p>Endereço: 0x6B7Ee67c43997bdFC5681397120c360123732a1d</p>
+  <img src="img/bnb_qrcode.png" alt="QR Code BNB">
+  <button class="button-copy" onclick="copyCrypto('0x6B7Ee67c43997bdFC5681397120c360123732a1d')">Copiar endereço BNB</button>
+</div>
+
+<div class="pix-box">
+  <p><strong>USDT</strong> — Rede: TRON (TRC20)</p>
+  <p>Endereço: TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6</p>
+  <img src="img/usdt_qrcode.png" alt="QR Code USDT">
+  <button class="button-copy" onclick="copyCrypto('TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6')">Copiar endereço USDT</button>
+</div>
+
+<div class="pix-box">
+  <p><strong>USDC</strong> — Rede: TRON (TRC20)</p>
+  <p>Endereço: TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6</p>
+  <img src="img/usdc_qrcode.png" alt="QR Code USDC">
+  <button class="button-copy" onclick="copyCrypto('TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6')">Copiar endereço USDC</button>
+</div>
+
+<div class="copy-message" id="cryptoCopyMsg">✅ Endereço copiado!</div>
   </main>
 
   <footer>
