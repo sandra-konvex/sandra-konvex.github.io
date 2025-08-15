@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Echo Engine</title>
+		<style>
+			body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+			header { background-color: #005f73; color: white; padding: 20px; text-align: center; }
+			nav a { margin: 0 10px; color: white; text-decoration: none; font-weight: bold; }
+			.container { max-width: 900px; margin: auto; padding: 30px 20px; }
+			h1, h2 { color: #0a9396; }
+			p, li { line-height: 1.6; }
+			ul { padding-left: 20px; }
+			img { max-width: 100%; height: auto; margin-top: 20px; border-radius: 8px; }
+			footer { background-color: #e0e0e0; padding: 20px; text-align: center; margin-top: 40px; }
+			footer a { margin: 0 10px; text-decoration: none; color: #005f73; }
+			footer p { margin: 10px 0; font-size: 0.9em; color: #555; }
+			.idioma-seletor { background-color: #e0f7fa; text-align: right; padding: 10px 20px; font-size: 0.9em;}
+			.idioma-seletor a { color: #005f73; text-decoration: none; margin: 0 5px; font-weight: bold;}
+			.idioma-seletor a:hover { text-decoration: underline;}
+			@media (max-width: 600px) { .container { padding: 20px 10px; } footer div { display: flex; flex-direction: column; gap: 8px; } }
+			.blog-banner { background-color: #e0f7fa; border: 2px solid #0a9396; border-radius: 10px; padding: 15px 20px; margin-top: 30px; font-size: 1.1em; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);}
+			.blog-banner a { color: #005f73; font-weight: bold; text-decoration: none;}
+			.blog-banner a:hover { text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Echo Engine</h1>
+			<p>Sound Monitoring for Inclusion of Autistic Children</p>
+			<nav>
+				<a href="basic.html">BASIC</a>
+				<a href="neural.html">NEURAL</a>
+				<a href="portable.html">PORTABLE</a>
+				<a href="sobre.html">About Me</a>
+				<a href="participe.html">Participate</a>
+			</nav>
+			<div class="idioma-seletor">
+				🌍 <strong>Language:</strong> <a href="index.html">English</a> |
+				<a href="index_pt.html">Português</a>
+			</div>
+		</header>
+		<main class="container">
+			<h2>🔊 ECHO_ENGINE — Sound Inclusion with AI</h2>
+			<p>
+				The <strong>ECHO_ENGINE</strong> is an open-source project created by Sandra Bati Furquim to support autistic children with auditory sensitivity. Using sensors and artificial intelligence, the system monitors noises in real
+				time and provides visual and auditory feedback to reduce sensory overloads.
+			</p>
+			<h2>🎯 Purpose</h2>
+			<p>
+				Created with a focus on inclusion, the project helps make school environments more accessible, assists educators in identifying sound triggers, and promotes child autonomy.
+			</p>
+			<h2>🧠 Technologies</h2>
+			<ul>
+				<li><strong>TensorFlow / Edge Impulse</strong>: AI for sound pattern recognition</li>
+				<li><strong>IoT + FreeRTOS</strong>: Remote monitoring and quick response</li>
+				<li><strong>HTML / JavaScript / SSE</strong>: Lightweight and accessible web interface</li>
+			</ul>
+			<h2>🔧 Hardware</h2>
+			<ul>
+				<li><strong>ESP32 / ESP8266</strong>: Microcontrollers with Wi-Fi</li>
+				<li><strong>RP2040 / Arduino Nano BLE Sense / STM32</strong>: Versatile and efficient</li>
+			</ul>
+			<p>
+				The source code is available on GitHub, allowing developers and researchers to contribute, customize, and expand the project for different contexts.
+			</p>
+			<h2>📊 System Diagram</h2>
+			<p>Visualization of the neural architecture with Edge Impulse:</p>
+			<img src="img/neural_diag.png" alt="Echo Engine Neural Diagram" />
+			<div class="blog-banner">
+				<p>
+					📘 <strong>For more information:</strong><br />
+					Visit my blog at <a href="https://sandra-konvex.x10.mx/wp/" target="_blank">sandra-konvex.x10.mx/wp</a>
+				</p>
+			</div>
+		</main>
+		<footer>
+			<p><strong>Connect with me:</strong></p>
+			<div>
+				<a href="https://x.com/SandraKonvex" target="_blank">🐦 X (Twitter)</a>
+				<a href="https://www.linkedin.com/in/sandra-bati-furquim/" target="_blank">💼 LinkedIn</a>
+				<a href="https://www.open.edu/openlearn/profiles/zs782286" target="_blank">🎓 OpenLearn Profile</a>
+				<a href="https://sandra-konvex.github.io/" target="_blank">💻 GitHub Pages</a>
+			</div>
+			<p>Made with ❤️ by Sandra Bati Furquim</p>
+		</footer>
+	</body>
+</html>
