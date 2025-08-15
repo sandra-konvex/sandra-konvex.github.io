@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donations — Echo Engine</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #005f73;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    h1, h2 {
+      color: #0a9396;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .pix-box {
+      background-color: #e0f7fa;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 20px;
+      color: #005f73;
+    }
+    .pix-box img {
+      margin-top: 15px;
+      max-width: 200px;
+      border-radius: 8px;
+    }
+    .currency-logo {
+      width: 30px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .button-copy {
+      background-color: #005f73;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .copy-message {
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #007f5f;
+      display: none;
+    }
+    footer {
+      background-color: #e0e0e0;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #005f73;
+    }
+    footer p {
+      margin: 10px 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .idioma-seletor {
+      background-color: #e0f7fa;
+      text-align: right;
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+    .idioma-seletor a {
+      color: #005f73;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+    .idioma-seletor a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 10px;
+      }
+      footer div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<script>
+  function copyCrypto(address, msgId) {
+    navigator.clipboard.writeText(address).then(() => {
+      const msg = document.getElementById(msgId);
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 2000);
+    });
+  }
+</script>
+<body>
+  <header>
+    <h1>Donations</h1>
+    <p>Help bring inclusion and technology to those who need it most</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="basic.html">BASIC</a>
+      <a href="neural.html">NEURAL</a>
+      <a href="portable.html">PORTABLE</a>
+      <a href="sobre.html">About Me</a>
+    </nav>
+    <div class="idioma-seletor">
+      🌍 <strong>Language:</strong>
+      <a href="index.html">English</a> | <a href="index_pt.html">Português</a>
+    </div>
+  </header>
+  <main class="container">
+    <h2>💡 Why donate?</h2>
+    <p>The <strong>Echo Engine</strong> project was born from a desire to make the world more inclusive. Each donation helps to:</p>
+    <ul>
+      <li>💻 Develop new prototypes with sensors and microcontrollers</li>
+      <li>🧪 Test devices in real-world environments</li>
+      <li>📦 Create educational kits for schools and NGOs</li>
+      <li>🌐 Maintain the project's digital infrastructure</li>
+      <li>📚 Produce tutorials and training materials</li>
+    </ul>
+    <h2>💰 How to donate via Cryptocurrencies</h2>
+    <div class="pix-box">
+      <p><img src="img/btc_logo.png" alt="Bitcoin Logo" class="currency-logo"><strong>Bitcoin (BTC)</strong> — Network: Bitcoin</p>
+      <p>Address: bc1q89h9ek8dmq2tzl5j2qw7rd7hj46zkmv2serc3x</p>
+      <img src="img/btc_qrcode.png" alt="QR Code BTC">
+      <button class="button-copy" onclick="copyCrypto('bc1q89h9ek8dmq2tzl5j2qw7rd7hj46zkmv2serc3x', 'cryptoCopyMsgBtc')">Copy BTC Address</button>
+      <div class="copy-message" id="cryptoCopyMsgBtc">✅ Address copied!</div>
+    </div>
+    <div class="pix-box">
+      <p><img src="img/eth_logo.png" alt="Ethereum Logo" class="currency-logo"><strong>Ethereum (ETH)</strong> — Network: Ethereum</p>
+      <p>Address: 0x6B7Ee67c43997bdFC5681397120c360123732a1d</p>
+      <img src="img/eth_qrcode.png" alt="QR Code ETH">
+      <button class="button-copy" onclick="copyCrypto('0x6B7Ee67c43997bdFC5681397120c360123732a1d', 'cryptoCopyMsgEth')">Copy ETH Address</button>
+      <div class="copy-message" id="cryptoCopyMsgEth">✅ Address copied!</div>
+    </div>
+    <div class="pix-box">
+      <p><img src="img/bnb_logo.png" alt="BNB Logo" class="currency-logo"><strong>BNB</strong> — Network: BNB Smart Chain</p>
+      <p>Address: 0x6B7Ee67c43997bdFC5681397120c360123732a1d</p>
+      <img src="img/bnb_qrcode.png" alt="QR Code BNB">
+      <button class="button-copy" onclick="copyCrypto('0x6B7Ee67c43997bdFC5681397120c360123732a1d', 'cryptoCopyMsgBnb')">Copy BNB Address</button>
+      <div class="copy-message" id="cryptoCopyMsgBnb">✅ Address copied!</div>
+    </div>
+    <div class="pix-box">
+      <p><img src="img/usdt_logo.png" alt="USDT Logo" class="currency-logo"><strong>USDT</strong> — Network: TRON (TRC20)</p>
+      <p>Address: TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6</p>
+      <img src="img/usdt_qrcode.png" alt="QR Code USDT">
+      <button class="button-copy" onclick="copyCrypto('TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6', 'cryptoCopyMsgUsdt')">Copy USDT Address</button>
+      <div class="copy-message" id="cryptoCopyMsgUsdt">✅ Address copied!</div>
+    </div>
+    <div class="pix-box">
+      <p><img src="img/usdc_logo.png" alt="USDC Logo" class="currency-logo"><strong>USDC</strong> — Network: TRON (TRC20)</p>
+      <p>Address: TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6</p>
+      <img src="img/usdc_qrcode.png" alt="QR Code USDC">
+      <button class="button-copy" onclick="copyCrypto('TFsjPcijLvvqdHJ3gRTcMaGSNfezgZq2r6', 'cryptoCopyMsgUsdc')">Copy USDC Address</button>
+      <div class="copy-message" id="cryptoCopyMsgUsdc">✅ Address copied!</div>
+    </div>
+    <h2>🔍 Transparency</h2>
+    <p>All funds raised will be invested directly in the development and distribution of the devices. Progress reports will be available for anyone who wishes to follow along.</p>
+    <h2>🤝 Join us</h2>
+    <p>If you believe that technology can transform lives, consider supporting this project. Every contribution — big or small — makes a huge difference.</p>
+  </main>
+  <footer>
+    <p><strong>Connect with me:</strong></p>
+    <div>
+      <a href="https://x.com/SandraKonvex" target="_blank">🐦 X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/sandra-bati-furquim/" target="_blank">💼 LinkedIn</a>
+      <a href="https://www.open.edu/openlearn/profiles/zs782286" target="_blank">🎓 OpenLearn Profile</a>
+      <a href="https://sandra-konvex.github.io/" target="_blank">💻 GitHub Pages</a>
+    </div>
+    <p>Made with ❤️ by Sandra Bati Furquim</p>
+  </footer>
+</body>
+</html>
