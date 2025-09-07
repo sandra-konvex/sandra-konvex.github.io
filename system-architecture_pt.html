@@ -165,10 +165,19 @@
     <ul>
  <li><b>Com Wi-Fi</b>: Conectado a uma rede sem fio (como a internet de casa ou escola), ele envia dados para servidores externos (computadores remotos na nuvem) e pode ser configurado à distância.</li>
  <li><b>Sem Internet (Modo Autônomo)</b>: Funciona sozinho, sem conexão web. A configuração é feita via Bluetooth (conexão sem fio curta, como emparelhar fones de ouvido) ou Wi-Fi local usando qualquer celular Android.</li>
-<li><b>Modo Silencioso: Os dados são capturados e armazenados (e enviados, se conectado), mas sem acender os LEDs no painel – ideal para monitoramento discreto.</li>
+<li><b>Modo Silencioso</b>: Os dados são capturados e armazenados (e enviados, se conectado), mas sem acender os LEDs no painel – ideal para monitoramento discreto.</li>
    </ul> 
    <p>Todos os parâmetros, como limites de ruído ou idiomas, são ajustáveis via uma interface simples (uma tela no celular ou computador). O dispositivo suporta inicialmente 6 idiomas, e adicionar mais é fácil: as traduções ficam armazenadas na memória interna do ESP32 (usando um sistema chamado LittleFS, que é como um "pen drive" dentro do chip) e podem ser atualizadas conectando ao GitHub (um site para compartilhar códigos e arquivos).</p> 
+<p>Vários "protocolos" (conjuntos de regras personalizadas, como diferentes níveis de alerta para horários específicos) podem ser criados e salvos na memória para uso futuro.</p> 
 
+<h2>⚙️ Armazenamento e Acesso aos Dados</h2>
+    <p>
+    Os dados coletados incluem níveis de som em dB SPL (decibéis, uma medida de intensidade sonora, com precisão de 1%) e timestamps (data e hora em UTC, que é o horário universal para evitar confusões de fuso horário).
+    </p>
+<ul><li><b>Armazenamento Interno</b>: Os dados das últimas 24 horas ficam salvos no ESP32 e podem ser acessados localmente ou remotamente, inclusive em formato gráfico (como gráficos de linha mostrando variações ao longo do tempo).</ul>
+    <li><b>Armazenamento Expandido</b>: Há um slot para cartão SD (um pequeno cartão de memória, como os de câmeras), permitindo guardar dados por mais de um ano.</li>
+    </ul>
+    
    <h2>📊 Diagrama do Sistema</h2>
     <p>Visualização da arquitetura neural com Edge Impulse:</p>
     <img src="img/neural_diag.png" alt="Diagrama do Echo Engine Neural">
