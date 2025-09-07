@@ -174,13 +174,23 @@
     <p>
     Os dados coletados incluem níveis de som em dB SPL (decibéis, uma medida de intensidade sonora, com precisão de 1%) e timestamps (data e hora em UTC, que é o horário universal para evitar confusões de fuso horário).
     </p>
-<ul><li><b>Armazenamento Interno</b>: Os dados das últimas 24 horas ficam salvos no ESP32 e podem ser acessados localmente ou remotamente, inclusive em formato gráfico (como gráficos de linha mostrando variações ao longo do tempo).</ul>
-    <li><b>Armazenamento Expandido</b>: Há um slot para cartão SD (um pequeno cartão de memória, como os de câmeras), permitindo guardar dados por mais de um ano.</li>
-    </ul>
+<ul>
+  <li><b>Armazenamento Interno</b>: Os dados das últimas 24 horas ficam salvos no ESP32 e podem ser acessados localmente ou remotamente, inclusive em formato gráfico (como gráficos de linha mostrando variações ao longo do tempo).</li>
+  <li><b>Armazenamento Expandido</b>: Há um slot para cartão SD (um pequeno cartão de memória, como os de câmeras), permitindo guardar dados por mais de um ano.</li>
+</ul>
+
+    <h2>⚙️ Teste piloto atual</h2>
+    <p>
+     <ul> 
+     <li>O aparelho fica em "stand-by" (modo de espera, economizando energia) até detectar som ou um timer (temporizador) ativá-lo.</li>
+     <li>Nos primeiros 15 minutos, ele "escuta" o ambiente para calcular o nível médio normal.</li>
+     <li>Depois, ajusta progressivamente os alertas para alcançar níveis pré-definidos.</li>
+     <li>O professor pode alterar configurações instantaneamente via celular, e os dados são acessíveis em tempo real.</li>
+     </ul>  
+    </p>
+
+
     
-   <h2>📊 Diagrama do Sistema</h2>
-    <p>Visualização da arquitetura neural com Edge Impulse:</p>
-    <img src="img/neural_diag.png" alt="Diagrama do Echo Engine Neural">
    <div class="blog-banner">
   <p>
     📘 <strong>Para maiores informações:</strong><br>
