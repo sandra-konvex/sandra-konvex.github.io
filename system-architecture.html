@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- HTML Meta Tags -->
+<title>Echo Engine – System Architecture for Inclusive Environments</title>
+<meta name="description" content="">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://sandra-konvex.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Echo Engine">
+<meta property="og:description" content="Valuing human diversity. I’m developing ECHO, an open-source project to support autistic individuals with sound sensitivity. Let’s build solutions together! 🛠️">
+<meta property="og:image" content="https://sandra-konvex.github.io/img/sandra.jpg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="sandra-konvex.github.io">
+<meta property="twitter:url" content="https://sandra-konvex.github.io/">
+<meta name="twitter:title" content="Echo Engine">
+<meta name="twitter:description" content="Valuing human diversity. I’m developing ECHO, an open-source project to support autistic individuals with sound sensitivity. Let’s build solutions together! 🛠️">
+<meta name="twitter:image" content="https://sandra-konvex.github.io/img/sandra.jpg">
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Echo Engine</title>
+		<style>
+			body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+			header { background-color: #005f73; color: white; padding: 20px; text-align: center; }
+			nav a { margin: 0 10px; color: white; text-decoration: none; font-weight: bold; }
+			.container { max-width: 900px; margin: auto; padding: 30px 20px; }
+			h1, h2 { color: #0a9396; }
+			p, li { line-height: 1.6; }
+			ul { padding-left: 20px; }
+			img { max-width: 100%; height: auto; margin-top: 20px; border-radius: 8px; }
+			footer { background-color: #e0e0e0; padding: 20px; text-align: center; margin-top: 40px; }
+			footer a { margin: 0 10px; text-decoration: none; color: #005f73; }
+			footer p { margin: 10px 0; font-size: 0.9em; color: #555; }
+			.idioma-seletor { background-color: #e0f7fa; text-align: right; padding: 10px 20px; font-size: 0.9em;}
+			.idioma-seletor a { color: #005f73; text-decoration: none; margin: 0 5px; font-weight: bold;}
+			.idioma-seletor a:hover { text-decoration: underline;}
+			@media (max-width: 600px) { .container { padding: 20px 10px; } footer div { display: flex; flex-direction: column; gap: 8px; } }
+			.blog-banner { background-color: #e0f7fa; border: 2px solid #0a9396; border-radius: 10px; padding: 15px 20px; margin-top: 30px; font-size: 1.1em; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);}
+			.blog-banner a { color: #005f73; font-weight: bold; text-decoration: none;}
+			.blog-banner a:hover { text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Echo Engine</h1>
+			<p>Sound Monitoring for Inclusion of Autistic Children</p>
+			<nav>
+				<a href="basic.html">BASIC</a>
+				<a href="neural.html">NEURAL</a>
+				<a href="portable.html">PORTABLE</a>
+				<a href="sobre.html">About Me</a>
+				<a href="participe.html">Participate</a>
+			</nav>
+			<div class="idioma-seletor">
+				🌍 <strong>Language:</strong> <a href="index.html">English</a> |
+				<a href="index_pt.html">Português</a>
+			</div>
+		</header>
+		<main class="container">
+      <h2>⚙️ ECHO_ENGINE — System Architecture</h2>
+    <p>
+      Welcome to the explanation of how the <strong>ECHO-ENGINE</strong> works! This page is designed to be simple and accessible, even for those who are not experts in technology or IoT (Internet of Things, which is basically connecting devices to the internet to exchange data). We will explain step by step using everyday language. If a more technical term appears, we will add a brief explanation in parentheses.
+    </p>
+
+    <h2>🔧 Device Overview</h2>
+    <p>
+      The <strong>ECHO-ENGINE</strong> is a compact, smart device designed to monitor and manage noise levels in environments like classrooms, especially to help autistic children who can be sensitive to loud sounds. It acts as a <em>sound traffic light</em> – a simple visual alert system that uses lights to indicate the noise level.</p>
+    <p>Dimensions: The device fits inside a small case approximately 220 mm wide, 160 mm high, and 60 mm deep (similar to the size of a small book).</p>
+<p>Front Panel: There are three groups of LEDs (small, colored lights, like those on a remote control), with 5 LEDs per group. </p>
+<p> 🔵 Blue LEDs pulse gently to show the system is on and everything is calm.</p>
+<p> 🟡 Yellow LEDs turn on when the sound starts to become bothersome, serving as an initial warning.</p>
+<p> 🔴 Red LEDs flash at dangerous noise levels, indicating it's time to reduce the noise.</p>
+<p>Installation: The device is mounted on the wall about 2.20 meters from the floor, ensuring both students and teachers can see it easily.
+    </p>
+
+   <h2>⚙️ How It Captures and Responds to Sound</h2>
+    <p>At the heart of the <strong>ECHO-ENGINE</strong> is a special microphone called an INMP441 (a digital microphone that captures sound precisely, without distortion) connected to an ESP32 (a small computer chip, or microcontroller, that processes information quickly like a miniature brain).
+    </p>
+    <ul>
+ <li>The microphone "listens" to the surrounding ambient sound.</li>
+ <li>The ESP32 analyzes these sounds in real-time and triggers the LEDs based on the noise levels:
+    <ul>
+   <li>Low: Blue LEDs.</li>
+   <li>Medium (bothersome): Yellow LEDs.</li>
+   <li>High (dangerous): Red LEDs.</li>
+    </ul></li>
+      <li>This provides immediate feedback for everyone in the room, helping to maintain a calmer environment without the need for constant intervention.</li>
+    </ul>  
+    <p>Sporadic sounds, like a quick cough, do not affect the system – it focuses on continuous patterns to avoid false alarms.</p>
+
+    <h2>⚙️ Connection and Configuration</h2>
+    <p>
+      The ECHO-ENGINE is flexible and can work in several ways:
+    </p>
+    <ul>
+ <li><b>With Wi-Fi</b>: Connected to a wireless network (like home or school internet), it sends data to external servers (remote computers in the cloud) and can be configured remotely.</li>
+ <li><b>Without Internet (Standalone Mode)</b>: It works on its own, without a web connection. Configuration is done via Bluetooth (short-range wireless connection, like pairing headphones) or local Wi-Fi using any Android phone.</li>
+<li><b>Silent Mode</b>: Data is captured and stored (and sent, if connected), but without lighting up the LEDs on the panel &mdash; ideal for discreet monitoring.</li>
+   </ul> 
+   <p>All parameters, such as noise limits or languages, are adjustable via a simple interface (a screen on your phone or computer). The device initially supports 6 languages, and adding more is easy: the translations are stored in the ESP32's internal memory (using a system called LittleFS, which is like a "pen drive" inside the chip) and can be updated by connecting to GitHub (a website for sharing code and files).</p> 
+<p>Multiple "protocols" (custom rule sets, like different alert levels for specific times) can be created and saved in the memory for future use.</p> 
+
+<h2>⚙️ Data Storage and Access</h2>
+    <p>
+    The collected data includes sound levels in dB SPL (decibels, a measure of sound intensity, with 1% accuracy) and timestamps (date and time in UTC, which is universal time to avoid timezone confusion).
+    </p>
+<ul>
+  <li><b>Internal Storage</b>: Data from the last 24 hours is saved on the ESP32 and can be accessed locally or remotely, even in graphical format (like line charts showing variations over time).</li>
+  <li><b>Expanded Storage</b>: There is a slot for an SD card (a small memory card, like those in cameras), allowing data to be stored for over a year.</li>
+</ul>
+
+    <h2>⚙️ Current Pilot Test</h2>
+    <p>
+     <ul> 
+     <li>The device remains on "stand-by" (waiting mode, saving power) until it detects sound or a timer activates it.</li>
+     <li>For the first 15 minutes, it "listens" to the environment to calculate the normal average level.</li>
+     <li>After that, it progressively adjusts the alerts to reach pre-defined levels.</li>
+     <li>The teacher can change settings instantly via a mobile phone, and data is accessible in real-time.</li>
+     </ul>  
+    </p>
+
+ <h2>⚙️ Project Intention</h2>
+    <p>
+      We prioritize cost-effectiveness: we use cheap, easy-to-find components available anywhere in the world, so the ECHO-ENGINE can be manufactured at an affordable price. The goal is to promote inclusion, helping to create more friendly school environments for autistic children, educators, and everyone involved, with simple and effective technology.
+    </p>
+    <div class="blog-banner">
+				<p>
+					📘 <strong>For more information:</strong><br />
+					• Blog: <a href="https://sandra-konvex.x10.mx" target="_blank">sandra-konvex.x10.mx</a><br>
+                    • 🔧 GitHub: <a href="https://github.com/sandra-konvex/ECHO_ENGINE" target="_blank">ECHO_ENGINE</a>
+				</p>
+			</div>
+		</main>
+		<footer>
+			<p><strong>Connect with me:</strong></p>
+			<div>
+				<a href="https://x.com/SandraKonvex" target="_blank">🐦 X (Twitter)</a>
+				<a href="https://www.linkedin.com/in/sandra-bati-furquim/" target="_blank">💼 LinkedIn</a>
+				<a href="https://www.open.edu/openlearn/profiles/zs782286" target="_blank">🎓 OpenLearn Profile</a>
+				<a href="https://sandra-konvex.github.io/" target="_blank">💻 GitHub Pages</a>
+			</div>
+			<p>Made with ❤️ by Sandra Bati Furquim</p>
+			<img src="https://sandra-konvex.x10.mx/track.php" style="display:none;">
+		</footer>
+	</body>
+</html>
