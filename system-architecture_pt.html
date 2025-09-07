@@ -4,7 +4,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Echo Engine</title>
+  <title>Echo Engine – Arquitetura do Sistema para Ambientes Inclusivos</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -134,7 +134,7 @@
 
     <h2>🔧 Visão Geral do Aparelho</h2>
     <p>
-      O <strong>ECHO-ENGINE</strong> é um dispositivo compacto e inteligente projetado para monitorar e gerenciar níveis de ruído em ambientes como salas de aula, especialmente para ajudar crianças autistas que podem ser sensíveis a sons altos. Ele age como um "semáforo sonoro" – um sistema de alerta visual simples que usa luzes para indicar o nível de barulho.</p>
+      O <strong>ECHO-ENGINE</strong> é um dispositivo compacto e inteligente projetado para monitorar e gerenciar níveis de ruído em ambientes como salas de aula, especialmente para ajudar crianças autistas que podem ser sensíveis a sons altos. Ele age como um  <em>semáforo sonoro</em> – um sistema de alerta visual simples que usa luzes para indicar o nível de barulho.</p>
     <p>Dimensões: O aparelho cabe em um pequeno gabinete de aproximadamente 220 mm de largura, 160 mm de altura e 60 mm de profundidade (semelhante ao tamanho de um livro pequeno).</p>
 <p>Painel Frontal: Há três grupos de LEDs (luzes pequenas e coloridas, como as de um controle remoto), com 5 LEDs por grupo. </p>
 <p> 🔵 LEDs azuis pulsam suavemente para mostrar que o sistema está ligado e tudo está calmo.</p>
@@ -165,7 +165,7 @@
     <ul>
  <li><b>Com Wi-Fi</b>: Conectado a uma rede sem fio (como a internet de casa ou escola), ele envia dados para servidores externos (computadores remotos na nuvem) e pode ser configurado à distância.</li>
  <li><b>Sem Internet (Modo Autônomo)</b>: Funciona sozinho, sem conexão web. A configuração é feita via Bluetooth (conexão sem fio curta, como emparelhar fones de ouvido) ou Wi-Fi local usando qualquer celular Android.</li>
-<li><b>Modo Silencioso</b>: Os dados são capturados e armazenados (e enviados, se conectado), mas sem acender os LEDs no painel – ideal para monitoramento discreto.</li>
+<li><b>Modo Silencioso</b>: Os dados são capturados e armazenados (e enviados, se conectado), mas sem acender os LEDs no painel &mdash; ideal para monitoramento discreto.</li>
    </ul> 
    <p>Todos os parâmetros, como limites de ruído ou idiomas, são ajustáveis via uma interface simples (uma tela no celular ou computador). O dispositivo suporta inicialmente 6 idiomas, e adicionar mais é fácil: as traduções ficam armazenadas na memória interna do ESP32 (usando um sistema chamado LittleFS, que é como um "pen drive" dentro do chip) e podem ser atualizadas conectando ao GitHub (um site para compartilhar códigos e arquivos).</p> 
 <p>Vários "protocolos" (conjuntos de regras personalizadas, como diferentes níveis de alerta para horários específicos) podem ser criados e salvos na memória para uso futuro.</p> 
